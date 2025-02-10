@@ -1,6 +1,8 @@
 package com.example.first;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         aboutMe.setOnClickListener(v -> {
             t.setText("Name: Katherine\nEmail: fang.shuh@northeastern.edu");
+        });
+
+        findViewById(R.id.quickCalButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CalculatorActivity.class));
+            }
         });
     }
 }

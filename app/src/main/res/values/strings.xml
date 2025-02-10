@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">First</string>
     <string name="aboutMe">About me</string>
+    <string name="appwidget_text">Hello from Group 2 :)</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
 </resources>
