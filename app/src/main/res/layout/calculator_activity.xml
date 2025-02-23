@@ -22,6 +22,7 @@
 
 
        <!-- First Row -->
+
     <Button
         android:id="@+id/btn1"
         android:layout_width="0dp"
@@ -55,43 +56,46 @@
         app:layout_constraintWidth_percent="0.3" />
 
         <!-- Second Row -->
-        <Button
-            android:id="@+id/btn4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="4"
-            app:layout_constraintEnd_toStartOf="@+id/btn5"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn1"
-            app:layout_constraintWidth_percent="0.3" />
 
-        <Button
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        app:layout_constraintWidth_percent="0.3" />
+
+
+    <Button
             android:id="@+id/btn5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="5" 
+            android:text="5"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintEnd_toStartOf="@+id/btn6"
             app:layout_constraintStart_toEndOf="@+id/btn4"
             app:layout_constraintTop_toBottomOf="@+id/btn2"
             app:layout_constraintWidth_percent="0.3"/>
 
 
-        <Button
-            android:id="@+id/btn6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="6"
-            app:layout_constraintEnd_toStartOf="@+id/btn3"
-            app:layout_constraintStart_toEndOf="@+id/btn5"
-            app:layout_constraintTop_toBottomOf="@+id/btn3"
-            app:layout_constraintWidth_percent="0.3" />
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="6"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn3"
+        app:layout_constraintWidth_percent="0.3" />
 
-        <!-- Third Row -->
-        <Button
+    <!-- Third Row -->
+    <Button
             android:id="@+id/btn7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

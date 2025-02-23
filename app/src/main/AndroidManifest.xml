@@ -38,6 +38,8 @@
             android:name=".CalculatorActivity"
             android:exported="false"
             android:label="Quick Calc" />
+
+        <activity android:name=".ContactsCollectorActivity"/>
     </application>
 
 </manifest>
