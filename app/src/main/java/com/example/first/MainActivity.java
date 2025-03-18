@@ -49,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button primeSearch = findViewById(R.id.primeSearchButton);
+        primeSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Starting Prime Search", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, PrimeSearchActivity.class));
+            }
+        });
     }
 }
