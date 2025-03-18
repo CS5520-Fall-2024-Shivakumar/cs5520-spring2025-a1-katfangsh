@@ -33,14 +33,14 @@ public class PrimeSearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prime_search_activity);
 
-        // Initialize UI elements
+        // initialize UI elements
         initializeViews();
 
-        // Restore state if available
+        // restore state if available
         if (savedInstanceState != null) {
             restoreState(savedInstanceState);
         }
-        // Set up button click listeners
+        // button click listeners
         setupClickListeners();
     }
 
@@ -62,11 +62,11 @@ public class PrimeSearchActivity extends AppCompatActivity {
         isSearching = savedInstanceState.getBoolean(KEY_IS_SEARCHING, false);
         pacifierSwitch.setChecked(savedInstanceState.getBoolean(KEY_PACIFIER_STATE, false));
 
-        // Update UI with restored values
+        // update UI with restored values
         currentNumberText.setText(String.valueOf(currentNumber));
         latestPrimeText.setText(String.valueOf(latestPrime));
 
-        // If search was running, restart it at the saved number
+        // if search was running, restart it at the saved number
         if (isSearching) {
             startPrimeSearch();
         }
@@ -75,7 +75,7 @@ public class PrimeSearchActivity extends AppCompatActivity {
     private void setupClickListeners() {
         findPrimesButton.setOnClickListener(v -> {
             if (!isSearching) {
-                // Reset to 3 only when starting a new search
+                // reset to 3 only when starting a new search
                 if (searchThread == null || !searchThread.isAlive()) {
                     currentNumber = 3;
                 }
@@ -118,7 +118,6 @@ public class PrimeSearchActivity extends AppCompatActivity {
                     currentNumber += 2;
                 }
             } catch (InterruptedException e) {
-                // Search was interrupted, clean up
                 isSearching = false;
                 mainHandler.post(() -> updateButtonStates(false));
             }
@@ -130,7 +129,6 @@ public class PrimeSearchActivity extends AppCompatActivity {
         if (searchThread != null && searchThread.isAlive()) {
             searchThread.interrupt();
             try {
-                // Wait for the thread to finish, but not indefinitely
                 searchThread.join(1000);
             } catch (InterruptedException e) {
                 // Handle interruption if necessary
